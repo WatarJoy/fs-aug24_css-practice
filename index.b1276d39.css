@@ -1,0 +1,92 @@
+.people {
+  gap: 30px;
+  margin: 0 auto;
+  padding-top: 30px;
+  display: grid;
+}
+
+@media (width >= 500px) {
+  .people {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 430px;
+  }
+}
+
+@media (width >= 1000px) {
+  .people {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 890px;
+  }
+}
+
+.person {
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 200px;
+  margin: 0 auto;
+  transition: transform 1s;
+}
+
+.person:hover {
+  z-index: 10;
+  background-color: #ccc;
+  transform: scale(1.2);
+}
+
+.person:hover .person__extra {
+  visibility: visible;
+  opacity: 1;
+}
+
+.person__photo {
+  margin: 12px;
+  transition: border-radius 1s;
+  position: relative;
+}
+
+.person__photo img {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  transition: border-radius 1s;
+}
+
+.person__photo .person_rank {
+  color: #8b0000;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 8px 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+
+.person__photo:hover img {
+  border-radius: 25%;
+}
+
+.person__details {
+  padding: 16px;
+}
+
+.person__details .name {
+  color: #2f4f4f;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.person__extra {
+  visibility: hidden;
+  margin-top: 8px;
+  transition: visibility, opacity 1s;
+}
+
+.person__extra-sport, .person__extra-pay {
+  display: block;
+}
+/*# sourceMappingURL=index.b1276d39.css.map */
